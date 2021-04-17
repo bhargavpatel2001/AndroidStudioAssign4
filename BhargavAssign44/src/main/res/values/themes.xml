@@ -20,15 +20,15 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name ="BhargavFragment" >
+    <style name ="HomeFragment" >
         <item name="android:background">#FF5722</item>
     </style>
 
-    <style name ="PatelFragment">
-        <item name="android:background">#000000</item>
+    <style name ="DownloadFragment">
+        <item name="android:background">#FFFFFF</item>
     </style>
 
-    <style name ="N01373029Fragment">
+    <style name ="WebSeriveFragment">
         <item name="android:background">#33CD39</item>
     </style>
 

@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="bhargav.patel.n01373029.ui.home.HomeFrag"
+        android:name="bhargav.patel.n01373029.ui.Home.HomeFrag"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="bhargav.patel.n01373029.ui.gallery.DownloadFrag"
+        android:name="bhargav.patel.n01373029.ui.Download.DownloadFrag"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_download" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="bhargav.patel.n01373029.ui.slideshow.WebServiceFrag"
+        android:name="bhargav.patel.n01373029.ui.WebService.WebServiceFrag"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>
