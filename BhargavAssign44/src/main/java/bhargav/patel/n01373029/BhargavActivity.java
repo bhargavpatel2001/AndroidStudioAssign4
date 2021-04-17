@@ -2,6 +2,7 @@
 package bhargav.patel.n01373029;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -43,7 +44,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static androidx.core.content.PermissionChecker.PERMISSION_GRANTED;
 
@@ -56,7 +56,7 @@ public class BhargavActivity extends AppCompatActivity{
     private AppBarConfiguration mAppBarConfiguration;
 
     String latLongString;
-    LocationRequest mLocationRequest;
+    private LocationRequest mLocationRequest;
 
     LocationCallback mLocationCallBack = new LocationCallback(){
         @Override
@@ -77,13 +77,19 @@ public class BhargavActivity extends AppCompatActivity{
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
-        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+        mAppBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
                 .setDrawerLayout(drawer)
                 .build();
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        mLocationRequest = new LocationRequest()
+                .setInterval(5000)
+                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
     }
 
     @Override
@@ -148,8 +154,7 @@ public class BhargavActivity extends AppCompatActivity{
     private void getLastLocation() {
             FusedLocationProviderClient fusedLocationProviderClient;
             fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-            if (ActivityCompat.checkSelfPermission(this,ACCESS_FINE_LOCATION)==PERMISSION_GRANTED ||
-            ActivityCompat.checkSelfPermission(this,ACCESS_COARSE_LOCATION)==PERMISSION_GRANTED){
+            if (ActivityCompat.checkSelfPermission(this,ACCESS_FINE_LOCATION)==PERMISSION_GRANTED){
                 fusedLocationProviderClient.getLastLocation().addOnSuccessListener(this, new OnSuccessListener<Location>() {
                     @Override
                     public void onSuccess(Location location) {
@@ -168,9 +173,7 @@ public class BhargavActivity extends AppCompatActivity{
     }
 
     private void requestLocationUpdates() {
-        if (ActivityCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) == PERMISSION_GRANTED
-                ||
-                ActivityCompat.checkSelfPermission(this, ACCESS_COARSE_LOCATION) == PERMISSION_GRANTED)  {
+        if (ActivityCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) == PERMISSION_GRANTED)  {
 
             FusedLocationProviderClient fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
