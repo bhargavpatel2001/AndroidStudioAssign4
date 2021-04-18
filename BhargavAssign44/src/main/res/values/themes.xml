@@ -21,25 +21,25 @@
     </style>
 
     <style name ="HomeFragment" >
-        <item name="android:background">#FF5722</item>
+        <item name="android:background">#84CA34</item>
     </style>
 
     <style name ="DownloadFragment">
-        <item name="android:background">#FFFFFF</item>
+        <item name="android:background">#6735C1</item>
     </style>
 
     <style name ="WebSeriveFragment">
-        <item name="android:background">#33CD39</item>
+        <item name="android:background">#2196F3</item>
     </style>
 
     <style name ="ObjectFragment1">
-        <item name="android:textColor">#0B70C1</item>
+        <item name="android:textColor">#E32F22</item>
         <item name="android:textSize">10pt</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name ="ObjectFragment2">
-        <item name="android:textColor">#00BCD4</item>
+        <item name="android:textColor">#1E1200</item>
         <item name="android:textSize">16pt</item>
         <item name="android:textStyle">italic</item>
     </style>
