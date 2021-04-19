@@ -1,3 +1,4 @@
+//Bhargav Patel N01373029 Section B
 package bhargav.patel.n01373029.ui.Download;
 
 import android.app.ProgressDialog;
@@ -30,7 +31,7 @@ public class DownloadFrag extends Fragment {
     private SpinnerAdapter mSpinnerAdapter;
     Button downloadBtn;
     ImageView downloadImg;
-    String web;
+    String web,name;
     ProgressDialog p;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -60,34 +61,20 @@ public class DownloadFrag extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
                     web = "https://external-preview.redd.it/miWC3yoHKn8ODzWgVoSxbvfiXLl4vnnkPvN01FJxoww.jpg?auto=webp&s=cda910cd8679b4a25a77a6103089ed379b97fe0a";
-                    if (downloadImg != null){
-                        Toast.makeText(getContext(), "Hello", Toast.LENGTH_SHORT).show();
-                    }
                 }
 
-                if (position == 1) {
+                else if (position == 1) {
                     web = "https://c4.wallpaperflare.com/wallpaper/574/16/1023/naruto-sasuke-uchiha-snake-hd-wallpaper-preview.jpg";
-                    if (downloadImg != null){
-                        Toast.makeText(getContext(), "Hello", Toast.LENGTH_SHORT).show();
-                    }
                 }
-                if (position == 2) {
+                else if (position == 2) {
                     web = "https://wallpapercave.com/wp/wp5159771.jpg";
-                    if (downloadImg != null) {
-                        Toast.makeText(getContext(), "Hello", Toast.LENGTH_SHORT).show();
-                    }
+
                 }
-                if (position == 3) {
+                else if (position == 3) {
                     web = "https://m.media-amazon.com/images/M/MV5BYTkwNDBlYzktNjRlYS00MTI5LWI3MjItMDY1Y2U4OGQ2MDUwXkEyXkFqcGdeQXVyMjc2Nzg5OTQ@._V1_.jpg";
-                    if (downloadImg != null){
-                        Toast.makeText(getContext(), "Hello", Toast.LENGTH_SHORT).show();
-                    }
                 }
-                if (position == 4) {
+                else if (position == 4) {
                     web = "https://i.quotev.com/img/q/u/12/05/11/701211-2918344-kakashi_bells_thumb.jpg";
-                    if (downloadImg != null) {
-                        Toast.makeText(getContext(), "Hello", Toast.LENGTH_SHORT).show();
-                    }
                 }
             }
 
@@ -138,11 +125,11 @@ public class DownloadFrag extends Fragment {
         protected void onPostExecute(Bitmap bitmap) {
             super.onPostExecute(bitmap);
             if (downloadImg != null) {
-                p.hide();
                 downloadImg.setImageBitmap(bitmap);
-            } else {
-                p.show();
+                p.hide();
+
             }
+
 
         }
     }

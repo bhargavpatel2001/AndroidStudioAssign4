@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/Bhargav_nav_home">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/Bhargav_nav_home"
         android:name="bhargav.patel.n01373029.ui.Home.HomeFrag"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/Bhargav_nav_download"
         android:name="bhargav.patel.n01373029.ui.Download.DownloadFrag"
-        android:label="@string/menu_gallery"
+        android:label="@string/download"
         tools:layout="@layout/fragment_download" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/Bhargav_nav_webservice"
         android:name="bhargav.patel.n01373029.ui.WebService.WebServiceFrag"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:label="@string/webservice"
+        tools:layout="@layout/fragment_web_service" />
 </navigation>

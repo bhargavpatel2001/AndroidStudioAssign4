@@ -14,7 +14,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Bhargav Patel"
+        android:text="@string/bhargav_patel"
         android:textAlignment="center"
         android:theme="@style/ObjectFragment1"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,7 +28,7 @@
         android:id="@+id/BhargavTV2"
         android:layout_width="412dp"
         android:layout_height="61dp"
-        android:text="N01373029"
+        android:text="@string/n01373029"
         android:textAlignment="center"
         android:theme="@style/ObjectFragment1"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,7 +43,7 @@
         android:id="@+id/BhargavTimeString"
         android:layout_width="408dp"
         android:layout_height="63dp"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textAlignment="center"
         android:theme="@style/ObjectFragment2"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,7 +58,7 @@
         android:id="@+id/BhargavDateString"
         android:layout_width="409dp"
         android:layout_height="74dp"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textAlignment="center"
         android:theme="@style/ObjectFragment2"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,6 +66,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679"></TextView>
+        app:layout_constraintVertical_bias="0.679">
+    </TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

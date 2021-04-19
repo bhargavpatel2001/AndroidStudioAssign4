@@ -16,18 +16,20 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.093"></ImageView>
+        app:layout_constraintVertical_bias="0.093">
+    </ImageView>
 
     <TextView
         android:id="@+id/BhargavSpinTV"
         android:layout_width="142dp"
         android:layout_height="96dp"
-        android:text="Sai Yamanaka"
+        android:text="@string/sai_yamanaka"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.166"></TextView>
+        app:layout_constraintVertical_bias="0.166">
+    </TextView>
 </androidx.constraintlayout.widget.ConstraintLayout>

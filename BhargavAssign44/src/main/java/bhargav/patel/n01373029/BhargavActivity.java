@@ -75,14 +75,14 @@ public class BhargavActivity extends AppCompatActivity{
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.Bhargav_nav_view);
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.Bhargav_nav_home, R.id.Bhargav_nav_download, R.id.Bhargav_nav_webservice)
                 .setDrawerLayout(drawer)
                 .build();
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        NavController navController = Navigation.findNavController(this, R.id.Bhargav_nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
@@ -236,7 +236,7 @@ public class BhargavActivity extends AppCompatActivity{
 
     @Override
     public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        NavController navController = Navigation.findNavController(this, R.id.Bhargav_nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration) || super.onSupportNavigateUp();
     }
 
@@ -245,8 +245,8 @@ public class BhargavActivity extends AppCompatActivity{
         public void onBackPressed() {
             new AlertDialog.Builder(this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
-                    .setTitle("Type your Alert Title Here")
-                    .setMessage("Type your Alert Message Here")
+                    .setTitle("Warning")
+                    .setMessage("Are you sure you want to exit?")
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

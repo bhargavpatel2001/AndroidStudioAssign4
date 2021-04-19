@@ -12,7 +12,7 @@
     <item
         android:id="@+id/BhargavImgBtn"
         app:showAsAction="ifRoom"
-        android:title="BlankUseless"
+        android:title="@string/blankuseless"
         android:icon="@mipmap/map_round">
     </item>
 
