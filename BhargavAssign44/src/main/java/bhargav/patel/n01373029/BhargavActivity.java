@@ -78,7 +78,7 @@ public class BhargavActivity extends AppCompatActivity{
         NavigationView navigationView = findViewById(R.id.nav_view);
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.Bhargav_nav_home, R.id.Bhargav_nav_download, R.id.Bhargav_nav_webservice)
                 .setDrawerLayout(drawer)
                 .build();
 
