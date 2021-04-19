@@ -60,21 +60,21 @@ public class DownloadFrag extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    web = "https://external-preview.redd.it/miWC3yoHKn8ODzWgVoSxbvfiXLl4vnnkPvN01FJxoww.jpg?auto=webp&s=cda910cd8679b4a25a77a6103089ed379b97fe0a";
+                    web = getString(R.string.link1);
                 }
 
                 else if (position == 1) {
-                    web = "https://c4.wallpaperflare.com/wallpaper/574/16/1023/naruto-sasuke-uchiha-snake-hd-wallpaper-preview.jpg";
+                    web = getString(R.string.link2);
                 }
                 else if (position == 2) {
-                    web = "https://wallpapercave.com/wp/wp5159771.jpg";
+                    web = getString(R.string.link3);
 
                 }
                 else if (position == 3) {
-                    web = "https://m.media-amazon.com/images/M/MV5BYTkwNDBlYzktNjRlYS00MTI5LWI3MjItMDY1Y2U4OGQ2MDUwXkEyXkFqcGdeQXVyMjc2Nzg5OTQ@._V1_.jpg";
+                    web = getString(R.string.link4);
                 }
                 else if (position == 4) {
-                    web = "https://i.quotev.com/img/q/u/12/05/11/701211-2918344-kakashi_bells_thumb.jpg";
+                    web = getString(R.string.link5);
                 }
             }
 
@@ -94,8 +94,8 @@ public class DownloadFrag extends Fragment {
         protected void onPreExecute() {
             super.onPreExecute();
             p = new ProgressDialog(getActivity());
-            p.setTitle("Loading");
-            p.setMessage("Please wait...It is downloading");
+            p.setTitle(getString(R.string.Loading));
+            p.setMessage(getString(R.string.Message2));
             p.setIcon(android.R.drawable.ic_menu_upload);
             p.setIndeterminate(false);
             p.setCancelable(false);
@@ -135,10 +135,10 @@ public class DownloadFrag extends Fragment {
     }
     private void initList() {
         mSpinnerList = new ArrayList<>();
-        mSpinnerList.add(new SpinnerFrag("Sai Yamanaka", R.mipmap.sai_foreground));
-        mSpinnerList.add(new SpinnerFrag("Sasuke Uchiha", R.mipmap.sasuke_foreground));
-        mSpinnerList.add(new SpinnerFrag("Naruto Uzumaki", R.mipmap.naruto_foreground));
-        mSpinnerList.add(new SpinnerFrag("Sakura Haruno", R.mipmap.sakura_foreground));
-        mSpinnerList.add(new SpinnerFrag("Kakashi Hatake", R.mipmap.kakashi_foreground));
+        mSpinnerList.add(new SpinnerFrag(getString(R.string.Name1), R.mipmap.sai_foreground));
+        mSpinnerList.add(new SpinnerFrag(getString(R.string.Name2), R.mipmap.sasuke_foreground));
+        mSpinnerList.add(new SpinnerFrag(getString(R.string.Name3), R.mipmap.naruto_foreground));
+        mSpinnerList.add(new SpinnerFrag(getString(R.string.Name4), R.mipmap.sakura_foreground));
+        mSpinnerList.add(new SpinnerFrag(getString(R.string.Name5), R.mipmap.kakashi_foreground));
     }
 }

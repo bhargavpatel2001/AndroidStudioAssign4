@@ -28,7 +28,7 @@
         <item name="android:background">#6735C1</item>
     </style>
 
-    <style name ="WebSeriveFragment">
+    <style name ="WebSericeFragment">
         <item name="android:background">#2196F3</item>
     </style>
 
@@ -46,7 +46,7 @@
 
     <style name ="ObjectFragment3" >
         <item name="android:textColor">#FFEB3B</item>
-        <item name="android:textSize">16pt</item>
+        <item name="android:textSize">16dp</item>
         <item name="android:textStyle">normal</item>
     </style>
 </resources>

@@ -9,14 +9,14 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Domicile</string>
     <string name="blankuseless">BlankUseless</string>
     <string name="webservice">WebService</string>
-    <string name="download">Download</string>
+    <string name="download">"Télécharger "</string>
     <string name="sai_yamanaka">Sai Yamanaka</string>
     <string name="choose_any_of_the_options_below">Choose any of the options below</string>
     <string name="web_services">Web Services</string>
-    <string name="enter_zip_code">Enter ZIP code</string>
+    <string name="enter_zip_code">"Entrer le code postal "</string>
     <string name="bhargav_patel">Bhargav Patel</string>
     <string name="n01373029">N01373029</string>
     <string name="textview">TextView</string>
@@ -66,4 +66,16 @@
     <string name="Error">Error</string>
     <string name="Invalid">Invalid Zip Code</string>
     <string name="tryagain">Try again</string>
+    <string name="link1"><![CDATA[https://external-preview.redd.it/miWC3yoHKn8ODzWgVoSxbvfiXLl4vnnkPvN01FJxoww.jpg?auto=webp&s=cda910cd8679b4a25a77a6103089ed379b97fe0a]]></string>
+    <string name="link2">https://c4.wallpaperflare.com/wallpaper/574/16/1023/naruto-sasuke-uchiha-snake-hd-wallpaper-preview.jpg</string>
+    <string name="link3">https://wallpapercave.com/wp/wp5159771.jpg</string>
+    <string name="link4">https://m.media-amazon.com/images/M/MV5BYTkwNDBlYzktNjRlYS00MTI5LWI3MjItMDY1Y2U4OGQ2MDUwXkEyXkFqcGdeQXVyMjc2Nzg5OTQ@._V1_.jpg</string>
+    <string name="link5">https://i.quotev.com/img/q/u/12/05/11/701211-2918344-kakashi_bells_thumb.jpg</string>
+    <string name="Loading">Loading</string>
+    <string name="Message2">Please wait...It is downloading</string>
+    <string name="Name1">Sai Yamanaka</string>
+    <string name="Name2">Sasuke Uchiha</string>
+    <string name="Name3">Naruto Uzumaki</string>
+    <string name="Name4">Sakura Haruno</string>
+    <string name="Name5">Kakashi Hatake</string>
 </resources>
