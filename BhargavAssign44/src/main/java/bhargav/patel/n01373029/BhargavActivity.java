@@ -50,7 +50,6 @@ import static androidx.core.content.PermissionChecker.PERMISSION_GRANTED;
 public class BhargavActivity extends AppCompatActivity{
 
     public static final String TAG = "WhereAmIActivity";
-    private static final String ERROR_MSG = "Google Play services are unavailable.";
     private static final int LOCATION_PERMISSION_REQUEST = 1;
     private static final int REQUEST_CHECK_SETTINGS = 2;
     private AppBarConfiguration mAppBarConfiguration;
@@ -137,13 +136,13 @@ public class BhargavActivity extends AppCompatActivity{
                             resolvable.startResolutionForResult(BhargavActivity.this,
                                     REQUEST_CHECK_SETTINGS);
                         } catch (IntentSender.SendIntentException sendEx) {
-                            Log.e(TAG, "Location Settings resolution failed.", sendEx);
+                            Log.e(TAG, getString(R.string.log4), sendEx);
                         }
                         break;
                     case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
                         // Location settings issues can't be resolved by user.
                         // Request location updates anyway.
-                        Log.d(TAG, "Location Settings can't be resolved.");
+                        Log.d(TAG, getString(R.string.log3));
                         requestLocationUpdates();
                         break;
                 }
@@ -168,7 +167,7 @@ public class BhargavActivity extends AppCompatActivity{
         if (location != null) {
             double lat = location.getLatitude();
             double lng = location.getLongitude();
-            latLongString = "Lat:" + lat + "\n Long:" + lng;
+            latLongString = getString(R.string.Lat) + lat + getString(R.string.Long) + lng;
         }
     }
 
@@ -192,11 +191,11 @@ public class BhargavActivity extends AppCompatActivity{
                     requestLocationUpdates();
                     break;
                 case Activity.RESULT_CANCELED:
-                    Log.d(TAG, "Requested settings changes declined by user.");
+                    Log.d(TAG, getString(R.string.log1));
                     if (states.isLocationUsable())
                         requestLocationUpdates();
                     else
-                        Log.d(TAG, "No location services available.");
+                        Log.d(TAG, getString(R.string.log));
                     break;
                 default: break;
             }
@@ -209,8 +208,7 @@ public class BhargavActivity extends AppCompatActivity{
 
         if (requestCode == LOCATION_PERMISSION_REQUEST) {
             if (grantResults[0] != PERMISSION_GRANTED)
-                Toast.makeText(this, "Location Permission Denied",
-                        Toast.LENGTH_LONG).show();
+                Toast.makeText(this,getString(R.string.ToastDenied), Toast.LENGTH_LONG).show();
             else
                 requestLocationUpdates();
         }
@@ -245,9 +243,9 @@ public class BhargavActivity extends AppCompatActivity{
         public void onBackPressed() {
             new AlertDialog.Builder(this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
-                    .setTitle("Warning")
-                    .setMessage("Are you sure you want to exit?")
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    .setTitle(R.string.Warning)
+                    .setMessage(R.string.Exit)
+                    .setPositiveButton(R.string.Yes, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
 
@@ -255,7 +253,7 @@ public class BhargavActivity extends AppCompatActivity{
                             finish();
                         }
                     })
-                    .setNegativeButton("No", null)
+                    .setNegativeButton(R.string.No, null)
                     .show();
         }
 }

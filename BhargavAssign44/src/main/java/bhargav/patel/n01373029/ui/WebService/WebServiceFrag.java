@@ -59,12 +59,12 @@ public class WebServiceFrag extends Fragment {
                 if (length < 5) {
                     new AlertDialog.Builder(getContext())
                             .setIcon(android.R.drawable.ic_dialog_alert)
-                            .setTitle("Error")
-                            .setMessage("5 digits required")
-                            .setNegativeButton("Try again", null)
+                            .setTitle(R.string.Error)
+                            .setMessage(R.string.Required5)
+                            .setNegativeButton(R.string.Tryagain, null)
                             .show();
 
-                    zipCode.setError("This Field needs at least 5 digits");
+                    zipCode.setError(getString(R.string.setError));
                 }
                 else if (length == 5){
                     getWeather(view);
@@ -76,11 +76,11 @@ public class WebServiceFrag extends Fragment {
 
     public void getWeather(View v){
         zip = zipCode.getText().toString();
-        String url = "https://api.openweathermap.org/data/2.5/weather?";
-        url+="zip="+zip;
-        url+="&appid=bdaa2d98d75cdc4a10a13f4ec81d5be4";
-        url+="&units=metric";
-        Log.d("URL",url);
+        String url = getString(R.string.url);
+        url+=getString(R.string.zip)+zip;
+        url+=getString(R.string.appid);
+        url+=getString(R.string.conversion);
+        Log.d(getString(R.string.URL),url);
         new ReadJSONFeedTask().execute(url);
     }
 
@@ -122,28 +122,28 @@ public class WebServiceFrag extends Fragment {
         protected void onPostExecute(String result) {
             try {
                 JSONObject weatherJson = new JSONObject(result);
-                JSONArray dataArray1= weatherJson.getJSONArray("weather");
-                String strResults="Weather\n";
+                JSONArray dataArray1= weatherJson.getJSONArray(getString(R.string.weather));
+                String strResults=getString(R.string.Weather);
                 for (int i = 0; i < dataArray1.length(); i++) {
                     JSONObject jsonObject = dataArray1.getJSONObject(i);
-                    strResults +="id: "+jsonObject.getString("id");
-                    strResults +="\nmain: "+jsonObject.getString("main");
-                    strResults +="\ndescription: "+jsonObject.getString("description");
+                    strResults +=getString(R.string.id_)+jsonObject.getString(getString(R.string.id));
+                    strResults +=getString(R.string.main_)+jsonObject.getString(getString(R.string.main));
+                    strResults +=getString(R.string.description_)+jsonObject.getString(getString(R.string.description));
                 }
 
-                JSONObject dataObject= weatherJson.getJSONObject("coord");
-                strResults +="\nlat: "+dataObject.getString("lat");
-                strResults +="\nlon: "+dataObject.getString("lon");
+                JSONObject dataObject= weatherJson.getJSONObject(getString(R.string.coord));
+                strResults +=getString(R.string.lat_)+dataObject.getString(getString(R.string.lat));
+                strResults +=getString(R.string.lon_)+dataObject.getString(getString(R.string.lon));
 
-                JSONObject dataObject1= weatherJson.getJSONObject("sys");
-                strResults +="\ncountry: "+dataObject1.getString("country");
+                JSONObject dataObject1= weatherJson.getJSONObject(getString(R.string.sys));
+                strResults +=getString(R.string.country_)+dataObject1.getString(getString(R.string.country));
 
-                JSONObject dataObject2= weatherJson.getJSONObject("main");
-                strResults +="\ntemp: "+dataObject2.getString("temp");
-                strResults +="\nhumidity: "+dataObject2.getString("humidity");
-                strResults +="\ntemp_min: "+dataObject2.getString("temp_min");
-                strResults +="\ntemp_max: "+dataObject2.getString("temp_max");
-                strResults +="\nzipcode:"+ zip;
+                JSONObject dataObject2= weatherJson.getJSONObject(getString(R.string.main2));
+                strResults +=getString(R.string.temp_)+dataObject2.getString(getString(R.string.temp));
+                strResults +=getString(R.string.humidity_)+dataObject2.getString(getString(R.string.humidity));
+                strResults +=getString(R.string.temp_min_)+dataObject2.getString(getString(R.string.temp_min));
+                strResults +=getString(R.string.temp_max_)+dataObject2.getString(getString(R.string.temp_max));
+                strResults +=getString(R.string.zipcode_)+ zip;
 
                 displayJson.setText(strResults);
 
@@ -151,9 +151,9 @@ public class WebServiceFrag extends Fragment {
 
                 new AlertDialog.Builder(getContext())
                         .setIcon(android.R.drawable.ic_dialog_alert)
-                        .setTitle("Error")
-                        .setMessage("Invalid Zip Code")
-                        .setNegativeButton("Try again", null)
+                        .setTitle(R.string.Error)
+                        .setMessage(R.string.Invalid)
+                        .setNegativeButton(R.string.tryagain, null)
                         .show();
                 e.printStackTrace();
             }

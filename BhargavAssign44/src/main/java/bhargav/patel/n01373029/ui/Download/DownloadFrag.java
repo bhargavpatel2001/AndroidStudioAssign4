@@ -31,7 +31,7 @@ public class DownloadFrag extends Fragment {
     private SpinnerAdapter mSpinnerAdapter;
     Button downloadBtn;
     ImageView downloadImg;
-    String web,name;
+    String web;
     ProgressDialog p;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

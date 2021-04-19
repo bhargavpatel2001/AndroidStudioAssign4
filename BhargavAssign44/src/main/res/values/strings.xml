@@ -20,4 +20,52 @@
     <string name="bhargav_patel">Bhargav Patel</string>
     <string name="n01373029">N01373029</string>
     <string name="textview">TextView</string>
+    <string name="No">No</string>
+    <string name="Yes">Yes</string>
+    <string name="Exit">Are you sure you want to exit?</string>
+    <string name="Warning">Warning</string>
+    <string name="ToastDenied">Location Permission Denied</string>
+    <string name="log">No location services available.</string>
+    <string name="log1">Requested settings changes declined by user.</string>
+    <string name="Lat">Lat:</string>
+    <string name="Long">\n Long:</string>
+    <string name="log3">Location Settings can\'t be resolved.</string>
+    <string name="log4">Location Settings resolution failed.</string>
+    <string name="Required5">5 digits required</string>
+    <string name="Tryagain">Try again</string>
+    <string name="setError">This Field needs at least 5 digits</string>
+    <string name="url">https://api.openweathermap.org/data/2.5/weather?</string>
+    <string name="zip">zip=</string>
+    <string name="appid"><![CDATA[&appid=bdaa2d98d75cdc4a10a13f4ec81d5be4]]></string>
+    <string name="conversion"><![CDATA[&units=metric]]></string>
+    <string name="URL">URL</string>
+    <string name="weather">weather</string>
+    <string name="Weather">Weather\n</string>
+    <string name="id_">\"id: \"</string>
+    <string name="id">id</string>
+    <string name="main_">\nmain:</string>
+    <string name="main">main</string>
+    <string name="description_">\"\ndescription: \"</string>
+    <string name="description">description</string>
+    <string name="coord">coord</string>
+    <string name="lat_">\"\nlat: \"</string>
+    <string name="lat">lat</string>
+    <string name="lon_">\"\nlon: \"</string>
+    <string name="lon">lon</string>
+    <string name="sys">sys</string>
+    <string name="country_">\"\ncountry: \"</string>
+    <string name="country">country</string>
+    <string name="main2">main</string>
+    <string name="temp_">\"\ntemp: \"</string>
+    <string name="temp">temp</string>
+    <string name="humidity_">\"\nhumidity: \"</string>
+    <string name="humidity">humidity</string>
+    <string name="temp_min_">\"\ntemp_min: \"</string>
+    <string name="temp_min">temp_min</string>
+    <string name="temp_max_">\"\ntemp_max: \"</string>
+    <string name="temp_max">temp_max</string>
+    <string name="zipcode_">\nzipcode:</string>
+    <string name="Error">Error</string>
+    <string name="Invalid">Invalid Zip Code</string>
+    <string name="tryagain">Try again</string>
 </resources>
