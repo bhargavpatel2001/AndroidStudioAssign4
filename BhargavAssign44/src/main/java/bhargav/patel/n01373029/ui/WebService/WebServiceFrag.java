@@ -78,6 +78,7 @@ public class WebServiceFrag extends Fragment {
         String url = "https://api.openweathermap.org/data/2.5/weather?";
         url+="zip="+zip;
         url+="&appid=bdaa2d98d75cdc4a10a13f4ec81d5be4";
+        url+="&units=metric";
         Log.d("URL",url);
         new ReadJSONFeedTask().execute(url);
     }
@@ -129,11 +130,19 @@ public class WebServiceFrag extends Fragment {
                     strResults +="\ndescription: "+jsonObject.getString("description");
                 }
 
-                JSONObject dataObject= weatherJson.getJSONObject("main");
-                strResults +="\ntemp: "+dataObject.getString("temp");
-                strResults +="\nhumidity: "+dataObject.getString("humidity");
-                strResults +="\ntemp_min: "+dataObject.getString("temp_min");
-                strResults +="\ntemp_max: "+dataObject.getString("temp_max");
+                JSONObject dataObject= weatherJson.getJSONObject("coord");
+                strResults +="\nlat: "+dataObject.getString("lat");
+                strResults +="\nlon: "+dataObject.getString("lon");
+
+                JSONObject dataObject1= weatherJson.getJSONObject("sys");
+                strResults +="\ncountry: "+dataObject1.getString("country");
+
+                JSONObject dataObject2= weatherJson.getJSONObject("main");
+                strResults +="\ntemp: "+dataObject2.getString("temp");
+                strResults +="\nhumidity: "+dataObject2.getString("humidity");
+                strResults +="\ntemp_min: "+dataObject2.getString("temp_min");
+                strResults +="\ntemp_max: "+dataObject2.getString("temp_max");
+                strResults +="\nzipcode:"+ zip;
 
                 displayJson.setText(strResults);
 

@@ -107,7 +107,9 @@ public class DownloadFrag extends Fragment {
         protected void onPreExecute() {
             super.onPreExecute();
             p = new ProgressDialog(getActivity());
+            p.setTitle("Loading");
             p.setMessage("Please wait...It is downloading");
+            p.setIcon(android.R.drawable.ic_menu_upload);
             p.setIndeterminate(false);
             p.setCancelable(false);
             p.show();
